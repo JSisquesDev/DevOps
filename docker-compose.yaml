@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  backend:
+    image: jsisques/clinicabot-backend:latest
+    container_name: backend
+    hostname: backend
+    ports:
+      - 5080:5080
+    restart: unless-stopped
+  frontend:
+    image: jsisques/clinicabot-dashboard:latest
+    container_name: frontend
+    hostname: frontend
+    ports:
+      - 8085:3000
+    restart: unless-stopped
